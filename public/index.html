@@ -8,9 +8,9 @@
 </head>
 <body class="bg-blue-950">
 
-    <div class="flex flex-row justify-center items-center mt-72 ml-2 mr-2">
-        <div class="bg-white text-black text-center p-4  w-56 rounded-sm"><p id="dd" class="text-2xl font-bold italic"></p></div>
-        <div class="bg-orange-600 text-white p-4 text-center w-56 rounded-sm "><p id="my" class="text-2xl font-bold italic"></p></div>
+    <div class="flex flex-row items-center justify-center ml-2 mr-2 mt-72">
+        <div class="w-56 p-4 text-center text-black bg-white rounded-sm"><p id="dd" class="text-2xl italic font-bold"></p></div>
+        <div class="w-56 p-4 text-center text-white bg-orange-600 rounded-sm "><p id="my" class="text-2xl italic font-bold"></p></div>
     </div>
     <script>
         let dateday=document.getElementById("dd");
@@ -20,12 +20,13 @@
     let year=calender.getFullYear();//this year
   
      
-         const days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-         let day=days[calender.getDay()-1];
+         const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+         let day=days[calender.getDay()];
            const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             let name = month[calender.getMonth()];
           dateday.innerHTML =date+"<br>"+day;
           monthyear.innerHTML=name+"<br>"+year;
+       
         </script>
 </body>
 </html>
